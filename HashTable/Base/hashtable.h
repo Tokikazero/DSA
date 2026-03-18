@@ -1,5 +1,4 @@
-#ifndef HASHTABLE_H
-#define HASHTABLE_H
+#pragma one
 
 // HashTable dùng key kiểu int, value là string (char*)
 // STRUCT Entry
@@ -55,5 +54,3 @@ void ht_printEntries(HashTable *ht);
 
 // // In toàn bộ key ra stdout (trên một dòng)
 void ht_printKeys(HashTable *ht);
-
-#endif

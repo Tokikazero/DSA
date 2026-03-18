@@ -23,6 +23,7 @@ Queue *CreateQueue()
     return q;
 }
 
+// Time: O(1)
 int Enqueue(Queue *q, int value)
 {
     Node *node = CreateNode(value);
@@ -39,6 +40,7 @@ int Enqueue(Queue *q, int value)
     return 0;
 }
 
+// Time: O(1)
 int Dequeue(Queue *q, int *removedValue)
 {
     if (IsEmpty(q))
@@ -73,6 +75,7 @@ int Dequeue(Queue *q, int *removedValue)
     return 0;
 }
 
+// Time: O(1)
 int Peek(Queue *q, int *frontValue)
 {
     if (IsEmpty(q))
@@ -87,11 +90,13 @@ int Peek(Queue *q, int *frontValue)
     return 0;
 }
 
+// Time: O(1)
 int Size(Queue *q)
 {
     return q->size;
 }
 
+// Time: O(1)
 int IsEmpty(Queue *q)
 {
     return q->front == NULL;

@@ -2,13 +2,6 @@
 
 #define MAX_SIZE 100
 
-// STRUCT Queue
-//     INTEGER ARRAY data[MAX_SIZE]     // vùng lưu trữ phần tử
-//     INTEGER front                    // head index (chỉ số phần tử đầu)
-//     INTEGER rear                     // tail index (chỉ số phần tử cuối)
-//     INTEGER size                     // số lượng phần tử hiện tại
-// END STRUCT
-
 typedef struct Queue
 {
     int data[MAX_SIZE];

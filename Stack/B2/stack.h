@@ -1,5 +1,4 @@
-#ifndef STACK_H
-#define STACK_H
+#pragma one
 
 #include <stdio.h>
 
@@ -27,5 +26,3 @@ int Peek(const Stack *s);
 void Display(Stack *s);
 
 int Min(const Stack *s);
-
-#endif

@@ -7,6 +7,7 @@ void InitStack(Stack *s)
     InitQueue(&s->q2);
 }
 
+// Time: O(n)
 int Push(Stack *s, int value)
 {
     if (IsEmpty(&s->q2))
@@ -30,6 +31,7 @@ int Push(Stack *s, int value)
     return 0;
 }
 
+// Time: O(1)
 int Pop(Stack *s)
 {
     int removedValue;
@@ -37,16 +39,19 @@ int Pop(Stack *s)
     return removedValue;
 }
 
+// Time: O(1)
 int PeekStack(Stack *s)
 {
     return s->q2.data[s->q2.front];
 }
 
+// Time: O(1)
 int Size(Stack *s)
 {
     return s->q2.size;
 }
 
+// Time: O(1)
 int IsEmptyStack(Stack *s)
 {
     return s->q2.size == 0;

@@ -5,8 +5,10 @@ int main()
     Stack s;
     Init(&s);
 
-    printf(" %s ", IsEmpty1(&s) ? "Empty" : "Not Empty");
-    printf(" %s ", IsEmpty2(&s) ? "Empty" : "Not Empty");
+    printf(" %s ", IsEmpty1(&s) ? "Is Empty" : "Not Empty");
+    printf(" %s ", IsEmpty2(&s) ? "Is Empty" : "Not Empty");
+    printf(" %s ", IsFull1(&s) ? "Is Full" : "Not Empty");
+    printf(" %s ", IsFull2(&s) ? "Is Full" : "Not Empty");
 
     printf("Push 1 10\n");
     Push1(&s, 10);
@@ -26,20 +28,6 @@ int main()
     printf("Push 1 30\n");
     Push1(&s, 30);  
     printf("Push 2 30\n");
-    Push2(&s, 30);
-    // Display(&s);
-
-    // printf("Peek: %d\n", Peek(&s));
-    // Display(&s);
-
-    
-    // printf("Peek: %d\n", Peek(&s));
-    // Display(&s);
-    
-    // printf("Pop: %d\n", Pop(&s));
-    // printf("Pop: %d\n", Pop(&s));
-    
-    // printf("Pop (empty): %d\n", Pop(&s));
     
     Display(&s);
     

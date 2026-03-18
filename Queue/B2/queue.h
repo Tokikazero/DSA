@@ -1,5 +1,4 @@
-#ifndef QUEUE_H
-#define QUEUE_H
+#pragma one
 
 typedef struct Node 
 {
@@ -21,5 +20,3 @@ int Peek(Queue *q, int *frontValue);
 int Size(Queue *q);
 int IsEmpty(Queue *q);
 void DisplayQueue(Queue *q);
-
-#endif
