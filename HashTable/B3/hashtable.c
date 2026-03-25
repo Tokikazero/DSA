@@ -467,3 +467,23 @@ void ht_printPairsWithDiff(HashTable *ht, int k)
         }     
     }
 }
+
+// Bài 3 – Two Sum
+void twoSum(int arr[], int n, int target) 
+{
+    HashTable *ht = ht_create(n * 2);
+    for (int i = 0; i < n; i++) {
+        int complement = target - arr[i];
+        char *val = ht_get(ht, complement);
+        if (val) {
+            printf("[%s, %d]\n", val, i);
+            ht_destroy(ht);
+            return;
+        }
+        char buf[12];
+        sprintf(buf, "%d", i);
+        ht_put(ht, arr[i], buf);
+    }
+    ht_destroy(ht);
+    printf("Không tìm thấy\n");
+}

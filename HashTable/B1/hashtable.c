@@ -467,3 +467,36 @@ void ht_printPairsWithDiff(HashTable *ht, int k)
         }     
     }
 }
+
+
+// Bài 1 – tìm phần tử xuất hiện nhiều nhất
+int mostFrequent(int arr[], int n) 
+{
+    HashTable *ht = ht_create(n * 2);
+    for (int i = 0; i < n; i++) {
+        char buf[12];
+        char *val = ht_get(ht, arr[i]);
+        if (val) {
+            int count = atoi(val) + 1;
+            sprintf(buf, "%d", count);
+            ht_put(ht, arr[i], buf);
+        } else { 
+            ht_put(ht, arr[i], "1");
+        }
+    }
+
+    int maxKey = arr[0], maxCount = 0;
+    for (int i = 0; i < ht->capacity; i++) {
+        Entry *curr = ht->buckets[i];
+        while (curr) {
+            int count = atoi(curr->value);
+            if (count > maxCount) {
+                maxCount = count;
+                maxKey = curr->key;
+            }
+            curr = curr->next;
+        }
+    }
+    ht_destroy(ht);
+    return maxKey;
+}

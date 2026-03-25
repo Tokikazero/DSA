@@ -8,23 +8,32 @@ int main(void)
     ht_put(ht, 1, "Marsh");
     ht_put(ht, 2, "John");
     ht_put(ht, 3, "Mary");
+    ht_put(ht, 4, "Mary");
+    ht_put(ht, 5, "Marsh");
+    ht_put(ht, 6, "John");
 
-    // Overwrite key 3
-    ht_put(ht, 3, "MaryAnne");
+    char *result = ht_mostFrequentValue(ht);
+    if (result != NULL)
+    {
+        printf("Value most Frequent: %s", result);
+    } else printf("Hashtable is Empty");
 
-    printf("Value of key 1: %s\n", ht_get(ht, 1));
-    printf("Value of key 2: %s\n", ht_get(ht, 2));
-    printf("Value of key 3: %s\n", ht_get(ht, 3));
+    // // Overwrite key 3
+    // ht_put(ht, 3, "MaryAnne");
 
-    printf("Contains key 2? %d\n", ht_containsKey(ht, 2));
-    printf("Contains value \"Mary\"? %d\n", ht_containsValue(ht, "Mary"));
-    printf("Contains value \"MaryAnne\"? %d\n", ht_containsValue(ht, "MaryAnne"));
+    // printf("Value of key 1: %s\n", ht_get(ht, 1));
+    // printf("Value of key 2: %s\n", ht_get(ht, 2));
+    // printf("Value of key 3: %s\n", ht_get(ht, 3));
 
-    ht_remove(ht, 2);
-    printf("After remove key 2, contains key 2? %d\n", ht_containsKey(ht, 2));
+    // printf("Contains key 2? %d\n", ht_containsKey(ht, 2));
+    // printf("Contains value \"Mary\"? %d\n", ht_containsValue(ht, "Mary"));
+    // printf("Contains value \"MaryAnne\"? %d\n", ht_containsValue(ht, "MaryAnne"));
 
-    ht_printEntries(ht);
-    ht_printKeys(ht);
+    // ht_remove(ht, 2);
+    // printf("After remove key 2, contains key 2? %d\n", ht_containsKey(ht, 2));
+
+    // ht_printEntries(ht);
+    // ht_printKeys(ht);
 
     ht_destroy(ht);
     return 0;

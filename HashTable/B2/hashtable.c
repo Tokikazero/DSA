@@ -467,3 +467,21 @@ void ht_printPairsWithDiff(HashTable *ht, int k)
         }     
     }
 }
+
+// Bài 2 – đếm số cặp có hiệu bằng k
+int countPairsWithDiff(int arr[], int n, int k) 
+{
+    HashTable *ht = ht_create(n * 2);
+    for (int i = 0; i < n; i++) {
+        ht_put(ht, arr[i], "1");
+    }
+
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        if (ht_containsKey(ht, arr[i] + k)) {
+            count++;
+        }
+    }
+    ht_destroy(ht);
+    return count;
+}
