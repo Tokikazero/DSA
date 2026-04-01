@@ -14,6 +14,18 @@ int linear_search(int a[], int n, int target)
      */
 }
 
+int linear_search(int a[], int n, int target)
+{
+    for (int i = 0; i < n; i++)   // duyệt từ đầu đến cuối mảng
+    {
+        if (a[i] == target)       // nếu phần tử bằng target
+        {
+            return i;             // trả về vị trí tìm thấy
+        }
+    }
+    return -1; // nếu không tìm thấy, trả về -1
+}
+
 int main()
 {
     int a[] = {4, 2, 7, 1, 9, 3};

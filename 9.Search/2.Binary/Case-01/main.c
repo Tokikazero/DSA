@@ -17,6 +17,28 @@ int binary_search(int a[], int n, int target)
     */
 }
 
+int binary_search(int a[], int n, int target)
+{
+    int low = 0;
+    int high = n - 1;
+
+    while (low <= high)
+    {
+        int mid = low + (high - low) / 2; // tránh tràn số
+
+        if (a[mid] == target)
+            return mid;                   // tìm thấy, trả về vị trí
+
+        else if (a[mid] > target)
+            high = mid - 1;               // target nhỏ hơn, tìm bên trái
+
+        else
+            low = mid + 1;                // target lớn hơn, tìm bên phải
+    }
+
+    return -1; // không tìm thấy
+}
+
 int main()
 {
     int a[] = {1, 3, 5, 7, 9, 11, 13, 15};
