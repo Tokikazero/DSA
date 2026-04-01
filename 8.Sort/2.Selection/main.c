@@ -21,18 +21,16 @@ void selection_sort(int a[], int n)
 {
     for (int i = 0; i < n - 1; i++)
     {
-        int minIndex = i; // giả sử phần tử hiện tại là nhỏ nhất
+        int minIndex = i;
 
-        // tìm phần tử nhỏ nhất trong đoạn còn lại
         for (int j = i + 1; j < n; j++)
         {
             if (a[j] < a[minIndex])
             {
-                minIndex = j; // cập nhật chỉ số nhỏ nhất
+                minIndex = j;
             }
         }
 
-        // hoán đổi phần tử nhỏ nhất với phần tử đầu của đoạn
         if (minIndex != i)
         {
             int temp = a[i];

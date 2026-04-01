@@ -28,22 +28,21 @@ int partition(int a[], int low, int high)
 
 int partition(int a[], int low, int high)
 {
-    int pivot = a[high];   // chọn pivot là phần tử cuối
-    int i = low - 1;       // chỉ số của phần tử nhỏ hơn pivot
+    int pivot = a[high];
+    int i = low - 1;
 
     for (int j = low; j < high; j++)
     {
-        if (a[j] <= pivot) // nếu phần tử nhỏ hơn hoặc bằng pivot
+        if (a[j] <= pivot)
         {
             i++;
             swap(&a[i], &a[j]);
         }
     }
-    swap(&a[i + 1], &a[high]); // đặt pivot vào đúng vị trí
-    return i + 1;              // trả về chỉ số pivot
+    swap(&a[i + 1], &a[high]);
+    return i + 1;
 }
 
-// quick sort
 void quick_sort(int a[], int low, int high)
 {
     if (low < high)

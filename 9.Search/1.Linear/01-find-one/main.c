@@ -16,14 +16,14 @@ int linear_search(int a[], int n, int target)
 
 int linear_search(int a[], int n, int target)
 {
-    for (int i = 0; i < n; i++)   // duyệt từ đầu đến cuối mảng
+    for (int i = 0; i < n; i++)
     {
-        if (a[i] == target)       // nếu phần tử bằng target
+        if (a[i] == target)
         {
-            return i;             // trả về vị trí tìm thấy
+            return i;
         }
     }
-    return -1; // nếu không tìm thấy, trả về -1
+    return -1;
 }
 
 int main()
